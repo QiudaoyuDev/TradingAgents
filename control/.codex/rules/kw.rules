@@ -1,0 +1,88 @@
+# Managed by Knowledge Workshop
+# Codex native rules currently carry allow prefixes only; confirm and deny entries remain in hooks metadata.
+# source=shared id=shell-cat decision=allow
+prefix_rule(pattern=["cat"], decision="allow")
+# source=shared id=shell-find decision=allow
+prefix_rule(pattern=["find"], decision="allow")
+# source=shared id=git-add decision=allow
+prefix_rule(pattern=["git","add"], decision="allow")
+# source=shared id=git-branch decision=allow
+prefix_rule(pattern=["git","branch"], decision="allow")
+# source=shared id=git-commit decision=allow
+prefix_rule(pattern=["git","commit"], decision="allow")
+# source=shared id=git-diff decision=allow
+prefix_rule(pattern=["git","diff"], decision="allow")
+# source=shared id=git-fetch decision=allow
+prefix_rule(pattern=["git","fetch"], decision="allow")
+# source=shared id=git-log decision=allow
+prefix_rule(pattern=["git","log"], decision="allow")
+# source=shared id=git-ls-files decision=allow
+prefix_rule(pattern=["git","ls-files"], decision="allow")
+# source=shared id=git-pull decision=allow
+prefix_rule(pattern=["git","pull"], decision="allow")
+# source=shared id=git-push decision=allow
+prefix_rule(pattern=["git","push"], decision="allow")
+# source=shared id=git-remote decision=allow
+prefix_rule(pattern=["git","remote"], decision="allow")
+# source=shared id=git-rev-parse decision=allow
+prefix_rule(pattern=["git","rev-parse"], decision="allow")
+# source=shared id=git-show decision=allow
+prefix_rule(pattern=["git","show"], decision="allow")
+# source=shared id=git-status decision=allow
+prefix_rule(pattern=["git","status"], decision="allow")
+# source=shared id=shell-grep decision=allow
+prefix_rule(pattern=["grep"], decision="allow")
+# source=shared id=shell-head decision=allow
+prefix_rule(pattern=["head"], decision="allow")
+# source=shared id=shell-ls decision=allow
+prefix_rule(pattern=["ls"], decision="allow")
+# source=shared id=shell-nl decision=allow
+prefix_rule(pattern=["nl"], decision="allow")
+# source=shared id=node-check decision=allow
+prefix_rule(pattern=["node","--check"], decision="allow")
+# source=shared id=node-test decision=allow
+prefix_rule(pattern=["node","--test"], decision="allow")
+# source=shared id=node-version decision=allow
+prefix_rule(pattern=["node","--version"], decision="allow")
+# source=shared id=node-version-short decision=allow
+prefix_rule(pattern=["node","-v"], decision="allow")
+# source=shared id=kw-help decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","--help"], decision="allow")
+# source=shared id=kw-change decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","change"], decision="allow")
+# source=shared id=kw-bootstrap-reconcile-write decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","control","bootstrap-reconcile","--consumer-root",".","--write"], decision="allow")
+# source=shared id=kw-control-doctor decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","control","doctor"], decision="allow")
+# source=shared id=kw-control-hydrate-write decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","control","hydrate","--consumer-root",".","--write"], decision="allow")
+# source=shared id=kw-knowledge-baseline-advise decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","control","knowledge-baseline","advise"], decision="allow")
+# source=shared id=kw-knowledge-baseline-plan decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","control","knowledge-baseline","plan"], decision="allow")
+# source=shared id=kw-project-capabilities-plan decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","control","project-capabilities","plan"], decision="allow")
+# source=shared id=kw-control-status decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","control","status"], decision="allow")
+# source=shared id=kw-control-update-advisory decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","control","update-advisory"], decision="allow")
+# source=shared id=kw-control-upgrade-plan decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","control","upgrade-plan"], decision="allow")
+# source=shared id=kw-control-where decision=allow
+prefix_rule(pattern=["node",".kw/bin/kw.mjs","control","where"], decision="allow")
+# source=shared id=npm-version decision=allow
+prefix_rule(pattern=["npm","--version"], decision="allow")
+# source=shared id=npm-version-short decision=allow
+prefix_rule(pattern=["npm","-v"], decision="allow")
+# source=shared id=npm-view decision=allow
+prefix_rule(pattern=["npm","view"], decision="allow")
+# source=shared id=shell-pwd decision=allow
+prefix_rule(pattern=["pwd"], decision="allow")
+# source=shared id=shell-rg decision=allow
+prefix_rule(pattern=["rg"], decision="allow")
+# source=shared id=shell-sed decision=allow
+prefix_rule(pattern=["sed"], decision="allow")
+# source=shared id=shell-tail decision=allow
+prefix_rule(pattern=["tail"], decision="allow")
+# source=shared id=shell-wc decision=allow
+prefix_rule(pattern=["wc"], decision="allow")

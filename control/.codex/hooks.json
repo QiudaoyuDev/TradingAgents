@@ -1,0 +1,329 @@
+{
+  "model": "kw-codex-hooks-v1",
+  "managed_by": "knowledge-workshop",
+  "source_sha256": "3157dd67754913086a230f3b3d9edee6cc0cf683369b20a7a02b17519a267448",
+  "permission_counts": {
+    "allow": 43,
+    "confirm": 8,
+    "deny": 37,
+    "total": 88
+  },
+  "permissions": [
+    {
+      "id": "deny-mutating-find",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "find -delete",
+      "description": "Block find forms that execute commands or delete files."
+    },
+    {
+      "id": "deny-mutating-find",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "find -exec",
+      "description": "Block find forms that execute commands or delete files."
+    },
+    {
+      "id": "deny-mutating-find",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "find -ok",
+      "description": "Block find forms that execute commands or delete files."
+    },
+    {
+      "id": "deny-mutating-find",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "find <path> -delete",
+      "description": "Block find forms that execute commands or delete files."
+    },
+    {
+      "id": "deny-mutating-find",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "find <path> -exec",
+      "description": "Block find forms that execute commands or delete files."
+    },
+    {
+      "id": "deny-mutating-find",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "find <path> -ok",
+      "description": "Block find forms that execute commands or delete files."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git branch -D",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git checkout -- <path>",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git clean -fd",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git clean -fdx",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git filter-branch",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git push --delete",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git push --force",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git push --force-with-lease",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git push -f",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git push <remote> :<ref>",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git reset --hard",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git restore --source",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git update-ref -d",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-destructive-git",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "git worktree remove --force",
+      "description": "Block destructive git operations."
+    },
+    {
+      "id": "deny-node-eval",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "node --eval",
+      "description": "Block inline Node.js evaluation and arbitrary one-off code execution."
+    },
+    {
+      "id": "deny-node-eval",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "node -e",
+      "description": "Block inline Node.js evaluation and arbitrary one-off code execution."
+    },
+    {
+      "id": "kw-control-init-consumer",
+      "decision": "confirm",
+      "source": "shared",
+      "prefix": "node .kw/bin/kw.mjs control init-consumer",
+      "description": "Creates or overwrites a control-plane skeleton."
+    },
+    {
+      "id": "kw-control-install",
+      "decision": "confirm",
+      "source": "shared",
+      "prefix": "node .kw/bin/kw.mjs control install",
+      "description": "Installs or overwrites a Knowledge Workshop installed copy."
+    },
+    {
+      "id": "kw-project-capabilities-install",
+      "decision": "confirm",
+      "source": "shared",
+      "prefix": "node .kw/bin/kw.mjs control project-capabilities install",
+      "description": "Writes native agent project configuration."
+    },
+    {
+      "id": "kw-publish",
+      "decision": "confirm",
+      "source": "shared",
+      "prefix": "node .kw/bin/kw.mjs control publish",
+      "description": "Builds and publishes release artifacts."
+    },
+    {
+      "id": "kw-control-update",
+      "decision": "confirm",
+      "source": "shared",
+      "prefix": "node .kw/bin/kw.mjs control update",
+      "description": "Installs a target version and refreshes managed entrypoints."
+    },
+    {
+      "id": "kw-control-use",
+      "decision": "confirm",
+      "source": "shared",
+      "prefix": "node .kw/bin/kw.mjs control use",
+      "description": "Writes or rewrites the consumer lock."
+    },
+    {
+      "id": "kw-control-install-direct-cli",
+      "decision": "confirm",
+      "source": "shared",
+      "prefix": "node dist/kw/cli.js control install",
+      "description": "Installs or overwrites runtime files through the Node CLI entrypoint."
+    },
+    {
+      "id": "kw-control-use-direct-cli",
+      "decision": "confirm",
+      "source": "shared",
+      "prefix": "node dist/kw/cli.js control use",
+      "description": "Writes or rewrites `.kw/kw-lock.json` through the Node CLI entrypoint."
+    },
+    {
+      "id": "deny-public-package-publish",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "npm owner/team/org/access/dist-tag/deprecate",
+      "description": "Block public registry publish, token, ownership, and unpublish operations unless explicitly confirmed."
+    },
+    {
+      "id": "deny-public-package-publish",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "npm publish to public registry",
+      "description": "Block public registry publish, token, ownership, and unpublish operations unless explicitly confirmed."
+    },
+    {
+      "id": "deny-public-package-publish",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "npm token",
+      "description": "Block public registry publish, token, ownership, and unpublish operations unless explicitly confirmed."
+    },
+    {
+      "id": "deny-public-package-publish",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "npm unpublish",
+      "description": "Block public registry publish, token, ownership, and unpublish operations unless explicitly confirmed."
+    },
+    {
+      "id": "deny-public-package-publish",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "pnpm owner/team/org/access/dist-tag/deprecate",
+      "description": "Block public registry publish, token, ownership, and unpublish operations unless explicitly confirmed."
+    },
+    {
+      "id": "deny-public-package-publish",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "pnpm publish to public registry",
+      "description": "Block public registry publish, token, ownership, and unpublish operations unless explicitly confirmed."
+    },
+    {
+      "id": "deny-public-package-publish",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "pnpm token",
+      "description": "Block public registry publish, token, ownership, and unpublish operations unless explicitly confirmed."
+    },
+    {
+      "id": "deny-public-package-publish",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "pnpm unpublish",
+      "description": "Block public registry publish, token, ownership, and unpublish operations unless explicitly confirmed."
+    },
+    {
+      "id": "deny-protected-root-rm",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "rm -rf /",
+      "description": "Block recursive forced deletion of protected roots."
+    },
+    {
+      "id": "deny-protected-root-rm",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "rm -rf <agent-config-root>",
+      "description": "Block recursive forced deletion of protected roots."
+    },
+    {
+      "id": "deny-protected-root-rm",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "rm -rf <workspace-root>",
+      "description": "Block recursive forced deletion of protected roots."
+    },
+    {
+      "id": "deny-protected-root-rm",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "rm -rf ~",
+      "description": "Block recursive forced deletion of protected roots."
+    },
+    {
+      "id": "deny-protected-root-rm",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "rm -rf $HOME",
+      "description": "Block recursive forced deletion of protected roots."
+    },
+    {
+      "id": "deny-sed-in-place",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "sed --in-place",
+      "description": "Block in-place sed writes."
+    },
+    {
+      "id": "deny-sed-in-place",
+      "decision": "deny",
+      "source": "shared",
+      "prefix": "sed -i",
+      "description": "Block in-place sed writes."
+    }
+  ],
+  "hooks": []
+}
