@@ -217,3 +217,9 @@ __marimo__/
 
 # Cache
 **/data_cache/
+
+# OpenCode session state
+.omo/
+
+# Knowledge Workshop local runtime state
+.kw/local/
