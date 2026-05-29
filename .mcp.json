@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "tradingagents-data": {
+      "command": "python",
+      "args": ["-m", "opencode_mcp.server"]
+    }
+  }
+}
