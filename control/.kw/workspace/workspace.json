@@ -1,0 +1,34 @@
+{
+  "model": "kw-workspace-v1",
+  "protocol_version": "1.0.0",
+  "workspace_id": "TradingAgents",
+  "artifact_locale": "zh-CN",
+  "workspace_unit_root": ".",
+  "control_repo": {
+    "repo_id": "TradingAgents",
+    "local_root": ".",
+    "git_url": "",
+    "branch": ""
+  },
+  "managed_repos": [
+    {
+      "repo_id": "TradingAgents",
+      "local_root": ".",
+      "git_url": "",
+      "branch": "",
+      "roles": [
+        "control",
+        "self"
+      ]
+    }
+  ],
+  "reference_controls": [],
+  "reference_repos": [],
+  "knowledge_sources": [
+    {
+      "source_id": "local",
+      "path": "knowledge",
+      "scope": "workspace"
+    }
+  ]
+}

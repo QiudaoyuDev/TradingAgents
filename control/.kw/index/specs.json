@@ -1,0 +1,464 @@
+{
+  "model": "kw-spec-index-v1",
+  "protocol_version": "1.0.0",
+  "items": [
+    {
+      "path": ".kw/local/versions/1.3.1/specs/agent-adapters.md",
+      "spec_id": "agent-adapters",
+      "title": "Agent Adapters",
+      "summary": "Agent adapters and skills.",
+      "kind": "capability",
+      "scope": "shared-base",
+      "applies_to": [
+        "kw"
+      ],
+      "route_keys": [
+        "skill"
+      ],
+      "criticality": "contract",
+      "owns": [
+        "specs/agent-adapters.md",
+        "share/knowledge_workshop/protocol/agent-protocol.json",
+        "share/knowledge_workshop/protocol/agent-trusted-commands.json",
+        "share/knowledge_workshop/templates/agent-skills",
+        "src/kw/adapters/agent",
+        "src/kw/domains/control/controlSupport.ts",
+        "src/kw/domains/control/controlProjectCapabilities.ts",
+        "src/kw/domains/control/projectCapabilities.ts",
+        "src/kw/domains/control/projectPermissions.ts"
+      ],
+      "depends_on": [
+        "kw-sdd-protocol",
+        "capability-platform",
+        "knowledge-governance"
+      ],
+      "related_knowledge": [
+        "knowledge/repos/knowledge-workshop-code-map.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/agent-adapters.md"
+    },
+    {
+      "path": ".kw/local/versions/1.3.1/specs/capability-platform-roadmap.md",
+      "spec_id": "capability-platform-roadmap",
+      "title": "Capability Platform Roadmap",
+      "summary": "Defines the long-term Capability Platform direction, future roadmap anchor rule, experimental artifact queue, and validation surfaces.",
+      "kind": "capability",
+      "scope": "shared-base",
+      "applies_to": [
+        "knowledge-workshop"
+      ],
+      "route_keys": [
+        "capability roadmap",
+        "future-roadmap-anchor",
+        "experimental artifact families"
+      ],
+      "criticality": "advisory",
+      "owns": [
+        "specs/capability-platform-roadmap.md"
+      ],
+      "depends_on": [
+        "kw-sdd-protocol",
+        "knowledge-governance",
+        "evolvable-artifact-governance",
+        "agent-adapters",
+        "knowledge-artifacts",
+        "state-machine"
+      ],
+      "related_knowledge": [
+        "share/knowledge_workshop/knowledge/rules/knowledge-governance.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/capability-platform-roadmap.md"
+    },
+    {
+      "path": ".kw/local/versions/1.3.1/specs/capability-platform.md",
+      "spec_id": "capability-platform",
+      "title": "Capability Platform",
+      "summary": "Defines the Capability Package abstraction, stable v1/v2 install contracts, experimental v0 artifact families, Git-backed handoff, evidence storage, source boundaries, and validation surface.",
+      "kind": "capability",
+      "scope": "shared-base",
+      "applies_to": [
+        "knowledge-workshop"
+      ],
+      "route_keys": [
+        "kw-capability-package-v1",
+        "kw-capability-package-v2",
+        "kw control capability",
+        "kw-project-skills-v1",
+        "capability-lock"
+      ],
+      "criticality": "critical",
+      "owns": [
+        "specs/capability-platform.md",
+        "share/knowledge_workshop/schemas/kw-capability-package-v0.schema.json",
+        "share/knowledge_workshop/schemas/kw-capability-package-v1.schema.json",
+        "share/knowledge_workshop/schemas/kw-capability-package-v2.schema.json",
+        "share/knowledge_workshop/schemas/kw-capability-profile-v1.schema.json",
+        "share/knowledge_workshop/schemas/kw-capability-dependencies-v1.schema.json",
+        "share/knowledge_workshop/schemas/kw-capability-lock-v1.schema.json",
+        "share/knowledge_workshop/schemas/kw-knowledge-writeback-envelope-v0.schema.json",
+        "share/knowledge_workshop/schemas/kw-approval-record-v0.schema.json",
+        "share/knowledge_workshop/schemas/kw-self-growth-proposal-v0.schema.json",
+        "share/knowledge_workshop/schemas/kw-eval-case-v0.schema.json"
+      ],
+      "depends_on": [
+        "kw-sdd-protocol",
+        "capability-platform-roadmap",
+        "knowledge-artifacts",
+        "agent-adapters",
+        "state-machine",
+        "versioning-release",
+        "evolvable-artifact-governance",
+        "knowledge-governance"
+      ],
+      "related_knowledge": [
+        "share/knowledge_workshop/knowledge/rules/knowledge-governance.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/capability-platform.md"
+    },
+    {
+      "path": ".kw/local/versions/1.3.1/specs/code-test-quality.md",
+      "spec_id": "code-test-quality",
+      "title": "Code and Test Quality Baseline",
+      "summary": "Defines Knowledge Workshop source, test, cross-platform, and lint-tool quality boundaries.",
+      "kind": "quality",
+      "scope": "shared-base",
+      "applies_to": [
+        "knowledge-workshop"
+      ],
+      "route_keys": [
+        "lintCode",
+        "npm test",
+        "code-limits",
+        "runtime-layering"
+      ],
+      "criticality": "contract",
+      "owns": [
+        "specs/code-test-quality.md",
+        "share/knowledge_workshop/policies/limits/code-limits.json",
+        "tests/code-quality.test.mjs",
+        "tests/test-architecture.test.mjs",
+        "tests/runtime-layering.test.mjs",
+        "src/kw/core",
+        "src/kw/commands",
+        "src/kw/domains",
+        "src/kw/adapters"
+      ],
+      "depends_on": [
+        "kw-sdd-protocol",
+        "agent-adapters",
+        "template-validation",
+        "evolvable-artifact-governance"
+      ],
+      "related_knowledge": [
+        "knowledge/repos/knowledge-workshop-code-map.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/code-test-quality.md"
+    },
+    {
+      "path": ".kw/local/versions/1.3.1/specs/evolvable-artifact-governance.md",
+      "spec_id": "evolvable-artifact-governance",
+      "title": "Evolvable Artifact Governance",
+      "summary": "Defines owner, boundary, dependency, validation, and compatibility rules for long-lived shared product artifacts and experimental capability platform artifact families.",
+      "kind": "quality",
+      "scope": "shared-base",
+      "applies_to": [
+        "knowledge-workshop"
+      ],
+      "route_keys": [
+        "artifact family",
+        "lintSpecs",
+        "public-surface",
+        "artifact governance"
+      ],
+      "criticality": "contract",
+      "owns": [
+        "specs/evolvable-artifact-governance.md",
+        "src/kw/core/quality.ts",
+        "tests/artifact-governance.test.mjs"
+      ],
+      "depends_on": [
+        "kw-sdd-protocol",
+        "capability-platform",
+        "knowledge-governance",
+        "code-test-quality",
+        "versioning-release",
+        "template-validation",
+        "knowledge-artifacts",
+        "agent-adapters"
+      ],
+      "related_knowledge": [
+        "knowledge/repos/knowledge-workshop-code-map.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/evolvable-artifact-governance.md"
+    },
+    {
+      "path": ".kw/local/versions/1.3.1/specs/knowledge-artifacts.md",
+      "spec_id": "knowledge-artifacts",
+      "title": "Knowledge Artifacts",
+      "summary": "Records the retirement of the legacy Knowledge Artifact package surface and points distribution work to Capability Package contracts.",
+      "kind": "capability",
+      "scope": "shared-base",
+      "applies_to": [
+        "knowledge-workshop"
+      ],
+      "route_keys": [
+        "retired-knowledge-artifacts",
+        "kw-capability-package-v1",
+        "kw-capability-package-v2",
+        "kw control capability"
+      ],
+      "criticality": "advisory",
+      "owns": [
+        "specs/knowledge-artifacts.md",
+        "share/knowledge_workshop/guides/knowledge-artifacts.md"
+      ],
+      "depends_on": [
+        "capability-platform",
+        "knowledge-governance",
+        "versioning-release"
+      ],
+      "related_knowledge": [
+        "knowledge/repos/knowledge-workshop-code-map.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/knowledge-artifacts.md"
+    },
+    {
+      "path": ".kw/local/versions/1.3.1/specs/knowledge-governance.md",
+      "spec_id": "knowledge-governance",
+      "title": "Knowledge Governance",
+      "summary": "Defines fact boundaries among changes, specs, knowledge, capability-level writeback, self-growth evidence routing, indexing, and health checks.",
+      "kind": "workflow",
+      "scope": "shared-base",
+      "applies_to": [
+        "knowledge-workshop"
+      ],
+      "route_keys": [
+        "kw-knowledge-meta-v1",
+        "kw-spec-meta-v1",
+        "kw change lint-specs",
+        "kw change review-knowledge"
+      ],
+      "criticality": "critical",
+      "owns": [
+        "specs/knowledge-governance.md",
+        "share/knowledge_workshop/knowledge/rules/knowledge-governance.md",
+        "share/knowledge_workshop/guides/knowledge-format.md"
+      ],
+      "depends_on": [
+        "kw-sdd-protocol",
+        "capability-platform"
+      ],
+      "related_knowledge": [
+        "share/knowledge_workshop/knowledge/rules/knowledge-governance.md",
+        "knowledge/repos/knowledge-workshop-code-map.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/knowledge-governance.md"
+    },
+    {
+      "path": ".kw/local/versions/1.3.1/specs/kw-sdd-protocol.md",
+      "spec_id": "kw-sdd-protocol",
+      "title": "Knowledge Workshop Protocol 1.0.0",
+      "summary": "Top-level Knowledge Workshop 1.0.0 protocol entry for fact layers, workspace shape, platform direction, and cross-spec reading order.",
+      "kind": "protocol",
+      "scope": "shared-base",
+      "applies_to": [
+        "knowledge-workshop"
+      ],
+      "route_keys": [
+        "kw-sdd-protocol",
+        "kw-spec-meta-v1",
+        "kw change sync",
+        "Spec Impact"
+      ],
+      "criticality": "critical",
+      "owns": [
+        "specs/kw-sdd-protocol.md"
+      ],
+      "depends_on": [
+        "capability-platform",
+        "state-machine",
+        "workspace-inventory",
+        "knowledge-governance",
+        "agent-adapters",
+        "versioning-release",
+        "template-validation",
+        "knowledge-artifacts",
+        "evolvable-artifact-governance"
+      ],
+      "related_knowledge": [
+        "knowledge/repos/knowledge-workshop-code-map.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/kw-sdd-protocol.md"
+    },
+    {
+      "path": ".kw/local/versions/1.3.1/specs/state-machine.md",
+      "spec_id": "state-machine",
+      "title": "State Machine",
+      "summary": "Defines change lifecycle and requirement behavior.",
+      "kind": "workflow",
+      "scope": "shared-base",
+      "applies_to": [
+        "kw"
+      ],
+      "route_keys": [
+        "workflow_lifecycle",
+        "enter-phase"
+      ],
+      "criticality": "critical",
+      "owns": [
+        "specs/state-machine.md",
+        "share/knowledge_workshop/protocol/state-machine.json",
+        "src/kw/domains/change/change.ts",
+        "src/kw/domains/change/changeCore.ts"
+      ],
+      "depends_on": [
+        "kw-sdd-protocol",
+        "capability-platform"
+      ],
+      "related_knowledge": [
+        "knowledge/repos/knowledge-workshop-code-map.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/state-machine.md"
+    },
+    {
+      "path": ".kw/local/versions/1.3.1/specs/template-validation.md",
+      "spec_id": "template-validation",
+      "title": "Template Validation",
+      "summary": "Defines validation rules for shared starter templates, manifests, localized template resources, and managed agent entrypoint regions.",
+      "kind": "quality",
+      "scope": "shared-base",
+      "applies_to": [
+        "knowledge-workshop"
+      ],
+      "route_keys": [
+        "kw-template-manifest-v1",
+        "templates",
+        "locales",
+        "generated entrypoints"
+      ],
+      "criticality": "contract",
+      "owns": [
+        "specs/template-validation.md",
+        "share/knowledge_workshop/templates",
+        "share/knowledge_workshop/locales",
+        "share/knowledge_workshop/schemas/kw-template-manifest-v1.schema.json",
+        "src/kw/core/schema.ts",
+        "src/kw/domains/control/control.ts"
+      ],
+      "depends_on": [
+        "kw-sdd-protocol",
+        "agent-adapters"
+      ],
+      "related_knowledge": [
+        "knowledge/repos/knowledge-workshop-code-map.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/template-validation.md"
+    },
+    {
+      "path": ".kw/local/versions/1.3.1/specs/versioning-release.md",
+      "spec_id": "versioning-release",
+      "title": "Versioning and Release",
+      "summary": "Versioning and release.",
+      "kind": "workflow",
+      "scope": "shared-base",
+      "applies_to": [
+        "knowledge-workshop"
+      ],
+      "route_keys": [
+        "release",
+        "runtime package",
+        "update-advisory",
+        "kw control publish",
+        "kw-release-manifest-v1"
+      ],
+      "criticality": "critical",
+      "owns": [
+        "specs/versioning-release.md",
+        "src/kw/domains/control/release.ts",
+        "src/kw/domains/control/runtimeInstall.ts",
+        "src/kw/domains/control/updateAdvisory.ts",
+        "share/knowledge_workshop/schemas/kw-release-manifest-v1.schema.json",
+        "share/knowledge_workshop/release-advisories.json",
+        "package.json",
+        "packages/create"
+      ],
+      "depends_on": [
+        "kw-sdd-protocol",
+        "capability-platform",
+        "agent-adapters"
+      ],
+      "related_knowledge": [
+        "knowledge/repos/knowledge-workshop-code-map.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/versioning-release.md"
+    },
+    {
+      "path": ".kw/local/versions/1.3.1/specs/workspace-inventory.md",
+      "spec_id": "workspace-inventory",
+      "title": "Workspace Inventory",
+      "summary": "Defines control, managed repo, reference repo/control, workspace unit path resolution, and artifact locale fields.",
+      "kind": "protocol",
+      "scope": "shared-base",
+      "applies_to": [
+        "knowledge-workshop"
+      ],
+      "route_keys": [
+        "kw-workspace-v1",
+        ".kw/workspace/workspace.json",
+        "managed_repos",
+        "reference_repos"
+      ],
+      "criticality": "critical",
+      "owns": [
+        "specs/workspace-inventory.md",
+        ".kw/workspace/workspace.json",
+        "share/knowledge_workshop/schemas/kw-workspace-v1.schema.json",
+        "src/kw/core/workspace.ts"
+      ],
+      "depends_on": [
+        "kw-sdd-protocol"
+      ],
+      "related_knowledge": [
+        "knowledge/repos/knowledge-workshop-code-map.md"
+      ],
+      "source_kind": "kw-runtime",
+      "source_id": "kw-runtime",
+      "runtime_version": "1.3.1",
+      "runtime_relative_path": "specs/workspace-inventory.md"
+    }
+  ],
+  "diagnostics": []
+}

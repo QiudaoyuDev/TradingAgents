@@ -1,0 +1,15 @@
+{
+  "model": "kw-update-advisory-policy-v1",
+  "protocol_version": "1.0.0",
+  "enabled": true,
+  "check_interval_hours": 24,
+  "channel": "latest",
+  "notify_on": [
+    "patch",
+    "minor",
+    "major",
+    "dev-or-non-release-switch"
+  ],
+  "auto_update": false,
+  "auto_create_change": false
+}

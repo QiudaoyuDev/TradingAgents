@@ -1,0 +1,134 @@
+{
+  "model": "kw-template-manifest-v1",
+  "template_id": "consumer-starter-minimal",
+  "protocol_version": "1.0.0",
+  "targets": [
+    {
+      "path": "AGENTS.md",
+      "kind": "entry",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-explore/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-propose/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-apply-change/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-finish-change/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-archive-change/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-upgrade/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-knowledge-writing-policy/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-knowledge-baseline/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-self-bootstrap/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-capability-package/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-workflow-extension/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".agents/skills/kw-project-capability/SKILL.md",
+      "kind": "skill",
+      "renderers": [
+        "codex"
+      ]
+    },
+    {
+      "path": ".gitignore",
+      "kind": "ignore"
+    },
+    {
+      "path": ".kw/bin/kw.mjs",
+      "kind": "script"
+    },
+    {
+      "path": ".kw/project-capabilities.json",
+      "kind": "capability"
+    },
+    {
+      "path": ".kw/kw-update-policy.json",
+      "kind": "capability"
+    },
+    {
+      "path": ".kw/workspace/workspace.json",
+      "kind": "workspace"
+    },
+    {
+      "path": "changes",
+      "kind": "state"
+    },
+    {
+      "path": "knowledge",
+      "kind": "knowledge"
+    }
+  ],
+  "selected_agents": [
+    "codex"
+  ],
+  "default_agents": [
+    "codex"
+  ],
+  "layout": "flat",
+  "default_layout": "flat"
+}
