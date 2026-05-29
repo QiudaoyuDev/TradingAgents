@@ -1,0 +1,14 @@
+{
+  "model": "kw-project-capabilities-v1",
+  "protocol_version": "1.0.0",
+  "capabilities": {
+    "project-skills": {},
+    "workflow-requirements": {},
+    "knowledge-writing-policies": {},
+    "policy-rules": {},
+    "validators": {},
+    "self-bootstrap-policies": {},
+    "agent-permissions": {},
+    "update-advisory": {}
+  }
+}
