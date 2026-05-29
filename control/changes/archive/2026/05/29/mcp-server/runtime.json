@@ -1,0 +1,304 @@
+{
+  "model": "kw-runtime-v1",
+  "status": "completed",
+  "phase": "acceptance",
+  "workflow_lifecycle": "standard-change",
+  "workflow_profile": "feature",
+  "phase_updated_at": "2026-05-29T15:25:26+08:00",
+  "updated_at": "2026-05-29T15:29:06+08:00",
+  "blocked_from_phase": null,
+  "requirements": [
+    {
+      "requirement_id": "human-design-approval",
+      "kind": "gate",
+      "phase": "design",
+      "required_at": "before_leave_phase",
+      "status": "passed",
+      "title": "Human execution plan approval",
+      "description": "A standard-change lifecycle change with a standard profile or requires-human-decision tag must receive human confirmation of the final execution plan before leaving design.",
+      "record_mode": "manual_only",
+      "summary": "用户已确认执行计划，同意进入 execution 阶段",
+      "evidence_refs": [],
+      "source_policy": "kw-base:share\\knowledge_workshop\\policies\\workflow-extension.default.json",
+      "source": {
+        "type": "kw-base",
+        "policy_path": "share\\knowledge_workshop\\policies\\workflow-extension.default.json",
+        "resolved_path": ".kw/local/versions/1.3.1/share/knowledge_workshop/policies/workflow-extension.default.json"
+      },
+      "definition_hash": "6b46c86a08b9d2f2f678093dd4046dc4eeb64b885ce7a0a36cabf08a613470c7",
+      "matched_by": {
+        "selector_index": 0,
+        "change": {
+          "workflow_lifecycles": [
+            "standard-change"
+          ],
+          "workflow_profiles": [
+            "feature",
+            "refactor",
+            "architecture"
+          ]
+        },
+        "scope": {}
+      },
+      "evidence": {
+        "type": "note"
+      }
+    },
+    {
+      "requirement_id": "human-acceptance-approval",
+      "kind": "gate",
+      "phase": "acceptance",
+      "required_at": "before_finish",
+      "status": "passed",
+      "title": "Human acceptance approval",
+      "description": "A standard change or lightweight change tagged requires-human-decision must receive human confirmation of the completed result before finish. Acceptance must be recorded after reporting the completed result and cannot reuse design, execution, finish, archive, or commit pre-approval.",
+      "record_mode": "manual_only",
+      "summary": "completed_result_summary=MCP Server 已完成: 11 个工具, 10 单元测试通过, Server 启动正常; agent_gates_completed=validate,verify,review-knowledge,capture-knowledge; human_response_after_result=验收通过; conclusion=change 可关闭",
+      "evidence_refs": [],
+      "source_policy": "kw-base:share\\knowledge_workshop\\policies\\workflow-extension.default.json",
+      "source": {
+        "type": "kw-base",
+        "policy_path": "share\\knowledge_workshop\\policies\\workflow-extension.default.json",
+        "resolved_path": ".kw/local/versions/1.3.1/share/knowledge_workshop/policies/workflow-extension.default.json"
+      },
+      "definition_hash": "7c6ba22586fe37b9ec009da9711e775c34297326a45ff18ca385351b66c7f836",
+      "matched_by": {
+        "selector_index": 0,
+        "change": {
+          "workflow_lifecycles": [
+            "standard-change"
+          ],
+          "workflow_profiles": [
+            "feature",
+            "refactor",
+            "architecture"
+          ]
+        },
+        "scope": {}
+      },
+      "evidence": {
+        "type": "note",
+        "required_summary_fields": [
+          "completed_result_summary",
+          "agent_gates_completed",
+          "human_response_after_result",
+          "conclusion"
+        ]
+      }
+    },
+    {
+      "requirement_id": "knowledge-delta-reviewed",
+      "kind": "gate",
+      "phase": "acceptance",
+      "required_at": "before_finish",
+      "status": "passed",
+      "title": "Knowledge delta review",
+      "description": "Every formal change must complete knowledge delta review before finish. The requirement is satisfied by kw change review-knowledge with updated-existing, created-new, or not-needed.",
+      "record_mode": "derived_from_knowledge_review",
+      "summary": "MCP 集成是单向基础设施输出，不改核心框架业务逻辑，不产生新业务领域知识",
+      "evidence_refs": [
+        "runtime.knowledge_delta_review"
+      ],
+      "source_policy": "kw-base:share\\knowledge_workshop\\policies\\workflow-extension.default.json",
+      "source": {
+        "type": "kw-base",
+        "policy_path": "share\\knowledge_workshop\\policies\\workflow-extension.default.json",
+        "resolved_path": ".kw/local/versions/1.3.1/share/knowledge_workshop/policies/workflow-extension.default.json"
+      },
+      "definition_hash": "6590dca2b78c962e7bc40f19af4aa5a2d7affd78e2a857bc33fcda21dc3e7fdd",
+      "matched_by": {},
+      "evidence": {
+        "type": "runtime.knowledge_delta_review"
+      }
+    },
+    {
+      "requirement_id": "knowledge-candidate-captured",
+      "kind": "gate",
+      "phase": "acceptance",
+      "required_at": "before_finish",
+      "status": "passed",
+      "title": "Knowledge candidate capture",
+      "description": "Every new formal change must record knowledge candidate capture before finish. This records candidates or an explicit no-candidate basis without forcing durable knowledge writeback.",
+      "record_mode": "derived_from_knowledge_capture",
+      "summary": "Knowledge candidate capture result: not-needed",
+      "evidence_refs": [
+        "runtime.knowledge_candidates",
+        "knowledge-candidates.json"
+      ],
+      "source_policy": "kw-base:runtime.knowledge_candidates",
+      "source": {
+        "type": "kw-base",
+        "policy_path": "runtime.knowledge_candidates",
+        "resolved_path": ".kw/local/versions/1.3.1/share/knowledge_workshop/policies/workflow-extension.default.json"
+      },
+      "definition_hash": "2fe698f1e7b9ec2be0d280086ddb0f4596e8c40d39a5d28f2b4ddea58d5cc443",
+      "matched_by": {},
+      "evidence": {
+        "type": "runtime.knowledge_candidates"
+      },
+      "fields": {}
+    }
+  ],
+  "write_tracking": {
+    "repos": [
+      {
+        "repo_id": "TradingAgents",
+        "preflight_checked_at": "2026-05-29T15:10:19+08:00"
+      }
+    ]
+  },
+  "verification_results": [
+    {
+      "scope": "opencode-mcp",
+      "result": "passed",
+      "summary": "10/10 unit tests passed, server loads with 11 tools, StockTwits/Reddit tools work, error handling verified",
+      "commands": [],
+      "recorded_at": "2026-05-29T15:25:01+08:00"
+    }
+  ],
+  "knowledge_delta_review": {
+    "result": "not-needed",
+    "summary": "MCP 集成是单向基础设施输出，不改核心框架业务逻辑，不产生新业务领域知识",
+    "paths": [],
+    "updated_paths": [],
+    "target_paths": [],
+    "reference_paths": [],
+    "fields": {
+      "reusable_lesson_review": "none",
+      "reusable_lesson_decision": "not-needed",
+      "writeback_target": "none",
+      "decision_basis": "MCP 集成是一次性输出，不改核心框架业务逻辑",
+      "followup_change_or_todo": "none",
+      "project_goal_alignment": "基础设施输出层建设",
+      "observed_knowledge_gap": "none",
+      "reuse_context": "none",
+      "evidence_basis": "process-only",
+      "recommended_target": "none",
+      "writeback_decision": "not-needed",
+      "not_needed_category": "one-off",
+      "not_needed_basis": "MCP 集成是单向数据输出，不改核心框架逻辑，不产生新业务知识"
+    },
+    "knowledge_candidates": {
+      "result": "pending",
+      "candidate_file": "knowledge-candidates.json",
+      "candidate_ids": []
+    },
+    "target_decisions": [],
+    "policy_match_basis": "declared_scope",
+    "review_paths": [],
+    "matched_policy_ids": [
+      "base-default-knowledge-writing"
+    ],
+    "matched_rule_ids": [
+      "default-durable-fact-routing",
+      "project-goal-reusable-knowledge-routing"
+    ],
+    "docs": [
+      "Shared base guidance: every review-knowledge record should state whether durable facts changed, whether the change produced project-goal-relevant reusable knowledge, whether durable writeback is needed, the target and basis for that decision, and any follow-up change or TODO.",
+      "Planning guidance: proposal/design/tasks should decide the likely knowledge/** or specs/** writeback target, not-needed category, or follow-up change before execution; acceptance review confirms or updates that decision with evidence.",
+      "Use not-needed only after classifying why there is no project-goal-relevant reusable knowledge gap to write now. Valid categories are already-covered, one-off, unverified, sensitive, human-deferred, and out-of-project-goal. already-covered decisions should name the existing coverage path.",
+      "Keep protocol facts in specs/**, explanatory guidance in knowledge/**, and process notes in changes/**.",
+      "When durable knowledge or specs are created or updated, record enough evidence for a future AI agent to know what changed, which paths prove it, where to start reading, where follow-up writes belong, and how publishability is classified.",
+      "Project-goal reusable knowledge routing applies to every formal change, not only implementation work. Before finish, scan the task's key judgments for project-goal alignment, observed knowledge gaps, future reuse context, evidence basis, recommended target, and writeback decision.",
+      "A reusable cognition can come from code work, review, product analysis, industry research, operations troubleshooting, architecture judgment, process optimization, or domain modeling. The trigger is the combination of project relevance, future reuse, current knowledge gap, stability, and verifiable evidence.",
+      "For created-new or updated-existing, record the target path, evidence, AI entrypoints, and applicable scenarios so a future agent can decide when to read or update the knowledge. If the current change cannot safely write the target, record a follow-up instead of dropping the insight.",
+      "For not-needed, classify the reason as already-covered, one-off, unverified, sensitive, human-deferred, or out-of-project-goal. Use already-covered only with an existing coverage path in the basis or coverage field."
+    ],
+    "target_hints": [
+      {
+        "kind": "protocol",
+        "paths": [
+          "specs/**"
+        ],
+        "when": "The change creates or changes verifiable protocol, schema, runtime, CLI, state-machine, or generated-surface behavior."
+      },
+      {
+        "kind": "knowledge",
+        "paths": [
+          "knowledge/**"
+        ],
+        "when": "The change captures reusable explanation, lessons, navigation, or project-specific guidance."
+      },
+      {
+        "kind": "project-goal-reusable-knowledge",
+        "paths": [
+          "knowledge/**",
+          "specs/**",
+          "share/knowledge_workshop/knowledge/**",
+          "share/knowledge_workshop/policies/**",
+          "share/knowledge_workshop/templates/agent-skills/**"
+        ],
+        "when": "The change produces a stable, evidence-backed judgment that future project work can reuse and current knowledge or specs do not already cover."
+      }
+    ],
+    "required_review_fields": [
+      "reusable_lesson_review",
+      "reusable_lesson_decision",
+      "writeback_target",
+      "decision_basis",
+      "followup_change_or_todo",
+      "project_goal_alignment",
+      "observed_knowledge_gap",
+      "reuse_context",
+      "evidence_basis",
+      "recommended_target",
+      "writeback_decision",
+      "not_needed_category",
+      "not_needed_basis"
+    ],
+    "path_review_fields": [
+      "target_paths",
+      "evidence_links",
+      "ai_entrypoints"
+    ],
+    "missing_required_fields": [],
+    "invalid_path_fields": [],
+    "effective_policy_sources": [
+      "kw-base:share\\knowledge_workshop\\policies\\knowledge-writing.default.json"
+    ]
+  },
+  "knowledge_candidates": {
+    "result": "not-needed",
+    "candidate_file": "knowledge-candidates.json",
+    "candidate_ids": [],
+    "candidate_count": 0,
+    "decisions": [],
+    "updated_at": "2026-05-29T15:28:10+08:00"
+  },
+  "checkpoints": [
+    {
+      "recorded_at": "2026-05-29T15:24:05+08:00",
+      "current_focus": "",
+      "next_action": "",
+      "notes": [],
+      "summary": "Implementation complete: opencode-mcp/ with 11 tools, unit tests, README, AGENTS.md update",
+      "files_touched": [],
+      "decisions_made": [],
+      "risks": [],
+      "resume_hint": ""
+    }
+  ],
+  "archive": {
+    "status": "archived",
+    "archived_at": "2026-05-29T15:29:06+08:00"
+  },
+  "allowed_actions": [
+    "brief",
+    "archive",
+    "archive-sync",
+    "close",
+    "reopen",
+    "commit-plan"
+  ],
+  "next_recommended_action": "brief",
+  "lifecycle_projection": {
+    "phase_projection": "native",
+    "active_phases": [
+      "proposal",
+      "design",
+      "execution",
+      "acceptance"
+    ],
+    "skipped_phases": []
+  }
+}

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opencode-mcp"
+version = "0.1.0"
+description = "MCP Server — 将 TradingAgents 数据层暴露为 AI 编码助手的工具"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "yfinance>=0.2.63",
+    "stockstats>=0.6.5",
+    "pandas>=2.3.0",
+    "requests>=2.32.4",
+    "pytz>=2025.2",
+]
+
+# Note: tradingagents is a workspace dependency.
+# Install it separately: pip install -e .  (from project root)
+# or: pip install -e ..                      (from opencode-mcp/)
+
+[project.scripts]
+opencode-mcp = "opencode_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

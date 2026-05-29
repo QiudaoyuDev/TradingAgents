@@ -1,0 +1,40 @@
+{
+  "model": "kw-change-v1",
+  "protocol_version": "1.0.0",
+  "change_id": "mcp-server",
+  "title": "MCP Server: 暴露 TradingAgents 数据层为 OpenCode 工具",
+  "type": "implementation",
+  "workflow_lifecycle": "standard-change",
+  "workflow_profile": "feature",
+  "created_at": "2026-05-29T15:06:06+08:00",
+  "updated_at": "2026-05-29T15:29:06+08:00",
+  "scope": {
+    "managed_repos": [
+      {
+        "repo_id": "TradingAgents",
+        "paths": [
+          "opencode-mcp"
+        ],
+        "intent": "modify"
+      }
+    ],
+    "reference_repos": [],
+    "reference_controls": [],
+    "tags": []
+  },
+  "artifacts": {
+    "proposal": {
+      "path": "proposal.md",
+      "hash": "sha256:ee784d55f6020e7007296f5fb29ba7dd300728f7907d43ecb13742304145eec3"
+    },
+    "design": {
+      "path": "design.md",
+      "hash": "sha256:31c4ee10c2bb5b37a5b1a00dded23b2ffaea3be6a85666d31e242fd4fce069d7"
+    },
+    "tasks": {
+      "path": "tasks.md",
+      "hash": "sha256:a9bd59753c636ced2c43fdd1a5a044c84c7924a7cd999d31b9639dc209305490"
+    }
+  },
+  "spec_deltas": []
+}

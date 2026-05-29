@@ -1,0 +1,12 @@
+{
+  "model": "kw-knowledge-candidates-v1",
+  "protocol_version": "1.0.0",
+  "source_change": "changes/2026/05/29/mcp-server",
+  "capture_result": "not-needed",
+  "not_needed_category": "one-off",
+  "not_needed_basis": "MCP 集成是单向输出，不改核心框架业务逻辑，不产生新业务知识",
+  "candidates": [],
+  "updated_at": "2026-05-29T15:28:10+08:00",
+  "existing_knowledge_coverage": [],
+  "fields": {}
+}
